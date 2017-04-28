@@ -6,17 +6,17 @@ import Data.Nullable (Nullable, toMaybe)
 import Data.Maybe (Maybe)
 import Control.Monad.Eff (Eff)
 
-import DOM.HTML.Types (HTMLElement)
+import DOM.Node.Types (Element)
 
 
 
 foreign import data QRCODE :: !
 
-foreign import toCanvasImpl :: forall eff handleEff. EffFn3 (qrcode :: QRCODE | eff) HTMLElement String (EffFn1 (qrcode :: QRCODE | handleEff) (Nullable String) Unit) Unit
+foreign import toCanvasImpl :: forall eff handleEff. EffFn3 (qrcode :: QRCODE | eff) Element String (EffFn1 (qrcode :: QRCODE | handleEff) (Nullable String) Unit) Unit
 
 
 toCanvas :: forall eff handleEff
-          . { canvas   :: HTMLElement
+          . { canvas   :: Element
             , qrString :: String
             , handle   :: Maybe String -> Eff (qrcode :: QRCODE | handleEff) Unit
             } -> Eff (qrcode :: QRCODE | eff) Unit

@@ -3,12 +3,12 @@ module Main where
 import Prelude
 import QRCode (QRCODE, toCanvas)
 import Data.Maybe (Maybe (..))
-import DOM.HTML.Types (HTMLElement)
+import DOM.Node.Types (Element)
 import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.Console (CONSOLE, log)
 
 
-foreign import theCanvas :: HTMLElement
+foreign import theCanvas :: Element
 
 
 main :: forall eff. Eff (qrcode :: QRCODE, console :: CONSOLE | eff) Unit
