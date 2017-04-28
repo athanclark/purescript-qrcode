@@ -1,0 +1,5 @@
+# while in `purescript-qrcode/`
+
+pulp build --include example/
+psc-bundle output/**/*.js -m Main --main Main > example/example.pre-browserified.js
+browserify example/example.pre-browserified.js example/example.js
