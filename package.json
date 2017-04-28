@@ -1,0 +1,25 @@
+{
+  "name": "purescript-qrcode",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/athanclark/purescript-qrcode.git"
+  },
+  "author": "Athan Clark <athan.clark@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/athanclark/purescript-qrcode/issues"
+  },
+  "homepage": "https://github.com/athanclark/purescript-qrcode#readme",
+  "dependencies": {
+    "qrcode": "^0.8.1"
+  }
+}
